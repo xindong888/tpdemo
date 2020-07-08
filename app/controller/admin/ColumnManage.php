@@ -8,6 +8,7 @@ use app\model\admin\ColumnTemplateModel;
 use Exception;
 use RedBeanPHP\RedException\SQL;
 use think\annotation\Route;
+use think\annotation\route\Group;
 use think\facade\View;
 
 /**
@@ -25,6 +26,7 @@ class ColumnManage extends \app\BaseController
      */
     public function index()
     {
+        print_r("测试");
         $list = ColumnModel::getAll();
         return View::fetch("admin/columnList", ['list' => $list]);
     }
